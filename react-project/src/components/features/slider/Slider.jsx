@@ -36,6 +36,7 @@ export function Slider({ className, children }) {
             className={`${styles.slide} ${isActive(index)}`}
             index={index}
             onClick={() => handleClickSlide(index)}
+            key={index}
           >
             {slide}
             {isActive(index) && (

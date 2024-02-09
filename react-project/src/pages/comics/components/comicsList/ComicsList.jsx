@@ -1,22 +1,32 @@
 import styles from "./comicsList.module.css";
-import { useData } from "../../../../hooks/useData";
-import { getAllComics } from "../../../../api/requests";
 import { CardItem } from "../../../../components";
 import { Spinner } from "./../../../../components/features/spinner";
 import { lowered } from "../../../../utils/strings";
+import { useComics } from "../../../../api/hooks/useComics";
+import { useMemo } from "react";
 
 const NOT_EXISTED_IMG = "image_not_available";
 
-export function ComicsList({ className, searchQuery }) {
-  const { data: comics, loading: loadingComics } = useData(getAllComics(), []);
+const DEFAULTS = {
+  comics: [],
+};
 
-  const filteredComics = comics.filter(
-    (item) =>
-      !item.thumbnail.path.includes(NOT_EXISTED_IMG) &&
-      lowered(item.title).includes(lowered(searchQuery))
+export function ComicsList({ className, searchQuery }) {
+  const { data, loading, error } = useComics({ limit: 100 });
+
+  const comics = data || DEFAULTS.comics;
+
+  const filteredComics = useMemo(
+    () =>
+      comics.filter(
+        (item) =>
+          !item.thumbnail.path.includes(NOT_EXISTED_IMG) &&
+          lowered(item.title).includes(lowered(searchQuery))
+      ),
+    [comics, searchQuery]
   );
 
-  return loadingComics ? (
+  return loading ? (
     <Spinner />
   ) : (
     <ul className={`${styles.cardList} ${className}`}>

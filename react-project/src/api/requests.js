@@ -17,6 +17,14 @@ export const getAllComics = () => () =>
     },
   });
 
+export const getAllComicsSWR = (params) =>
+  axios.get(`${BASE_URL}${END_POINTS.allComics}`, {
+    params: {
+      ...params,
+      apikey: API_KEY,
+    },
+  });
+
 export const getAllSeries = () => () => {
   axios.get(`${BASE_URL}${END_POINTS.allSeries}`, {
     params: {

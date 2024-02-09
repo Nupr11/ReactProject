@@ -4,6 +4,7 @@ import { AnimatedPage } from "../../components/animated";
 import { SearchBar } from "../../components";
 import React, { Suspense, useState } from "react";
 import { Spinner, Text, Title } from "../../components/features";
+import { useComics } from "../../api/hooks/useComics";
 
 export function Comics() {
   const [searchQuery, setSearchQuery] = useState("");

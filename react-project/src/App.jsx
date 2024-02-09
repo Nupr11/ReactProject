@@ -5,6 +5,10 @@ import { Layout } from "./layouts";
 import { Home, PageNotFound, Characters, Comics } from "./pages";
 import { Character } from "./pages/characters/components/character";
 import { AnimatePresence } from "framer-motion";
+import { useComics } from "./api/hooks/useComics";
+import { API_KEY } from "./api/config";
+
+import { useSWRConfig } from "swr";
 
 export function App() {
   const location = useLocation();
