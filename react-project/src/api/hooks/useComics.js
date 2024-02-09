@@ -11,13 +11,8 @@ export const useComics = (params) => {
     { revalidate: false }
   );
 
-  const comics = useMemo(
-    () => (data ? data.data.data.results : undefined),
-    [data]
-  );
-
   return {
-    data: comics,
+    data: data ? data.data.data.results : undefined,
     error,
     isLoading,
   };
