@@ -1,0 +1,6 @@
+.slide {
+  position: relative;
+  border-radius: 15px;
+  outline: 1px solid var(--secondary-color);
+  cursor: pointer;
+}

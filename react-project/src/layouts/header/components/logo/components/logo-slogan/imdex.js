@@ -1,0 +1,1 @@
+export { LogoSlogan } from "./LogoSlogan";

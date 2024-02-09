@@ -1,0 +1,5 @@
+.active {
+  background-color: var(--tertiary-color);
+  cursor: default;
+  box-shadow: 2px 2px 6px var(--tertiary-color);
+}

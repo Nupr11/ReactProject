@@ -1,0 +1,15 @@
+.btn {
+  padding: var(--button-primary-padding);
+  font: var(--button-primary-font);
+  background-color: var(--button-primary-bg);
+  color: var(--button-primary-color);
+  border-radius: var(--button-radius);
+  transition: var(--primary-transition);
+  border: var(--button-primary-border);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-color);
+}

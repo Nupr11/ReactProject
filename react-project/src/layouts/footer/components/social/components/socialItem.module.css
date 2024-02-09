@@ -1,0 +1,10 @@
+.svg {
+  fill: var(--social-color);
+  transform: translateY(0) scale(1);
+  transition: 0.3s;
+}
+
+.svg:hover {
+  transform: translateY(-3px) scale(1.1);
+  fill: var(--social-hover-color);
+}

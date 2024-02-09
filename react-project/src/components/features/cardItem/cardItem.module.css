@@ -1,0 +1,24 @@
+.cardListItem {
+  padding: 0.2rem;
+  max-width: 120px;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.7rem;
+  color: var(--secondary-color);
+  font: var(--card-font);
+}
+
+.img {
+  height: 170px;
+  box-shadow: 0 10px 17px -8px var(--secondary-color);
+}
+
+.card > figcaption {
+  margin-bottom: auto;
+  text-align: center;
+}

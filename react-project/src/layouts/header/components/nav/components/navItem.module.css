@@ -1,0 +1,22 @@
+.navItem {
+  height: 100%;
+  transition: var(--primary-transition);
+  font: var(--primary-font);
+  cursor: pointer;
+}
+
+.navItem:hover {
+  background-color: var(--tertiary-color);
+  opacity: 0.8;
+}
+
+.navLink {
+  padding: var(--card-padding);
+  display: flex;
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.navLink > span::first-letter {
+  text-transform: uppercase;
+}

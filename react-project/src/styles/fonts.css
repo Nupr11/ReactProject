@@ -1,0 +1,71 @@
+/* Roboto */
+
+@font-face {
+  font-family: "Roboto regular";
+  src: url(./../assets/fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto medium";
+  src: url(./../assets/fonts/Roboto/Roboto-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto bold";
+  src: url(./../assets/fonts/Roboto/Roboto-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto italic";
+  src: url(./../assets/fonts/Roboto/Roboto-Italic.ttf) format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Red Hat Text */
+
+@font-face {
+  font-family: "Red Hat Text regular";
+  src: url(./../assets/fonts/Red_Hat_Text/static/RedHatText-Regular.ttf)
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Red Hat Text medium";
+  src: url(./../assets/fonts/Red_Hat_Text/static/RedHatText-Medium.ttf)
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Red Hat Text bold";
+  src: url(./../assets/fonts/Red_Hat_Text/static/RedHatText-Bold.ttf)
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Red Hat Text italic";
+  src: url(./../assets/fonts/Red_Hat_Text/static/RedHatText-Italic.ttf)
+    format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}

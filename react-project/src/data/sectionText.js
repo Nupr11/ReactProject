@@ -1,0 +1,4 @@
+const textPromo =
+  "asdgadgadfgadfgafgadfgadfgadfgasdgadgadfgadfgafgadfgadfgadfgasdgadgadfgadfgafgadfgadfgadfgasdgadgadfgadfgafgadfgadfgadfgasdgadgadfgadfgafgadfgadfgadfgasdgadgadfgadfgafgadfgadfgadfgasdgadgadfgadfgafgadfgadfgadfg";
+
+export { textPromo };

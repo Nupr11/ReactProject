@@ -1,0 +1,11 @@
+.socialList {
+  display: flex;
+  list-style-type: none;
+}
+
+.socialItem {
+  padding: var(--social-icon-padding);
+  height: max-content;
+  margin: 0.5rem;
+  cursor: pointer;
+}

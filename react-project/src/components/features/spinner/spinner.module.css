@@ -1,0 +1,17 @@
+.spinnerContainer {
+  padding: 1rem;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  background-color: var(--tertiary-color);
+  box-shadow: 0 10px 17px -8px var(--tertiary-color);
+}
+
+.spinner {
+  margin: 1rem auto;
+}
+
+.spinnerContainer > div {
+  color: var(--primary-color);
+  font: var(--header-font);
+}

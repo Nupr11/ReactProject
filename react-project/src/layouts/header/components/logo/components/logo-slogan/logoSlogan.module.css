@@ -1,0 +1,5 @@
+.logoSlogan {
+  font: 0.8rem/0.8rem "Red Hat Text medium", sans-serif;
+  letter-spacing: 0.35rem;
+  color: var(--secondary-color);
+}

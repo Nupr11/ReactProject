@@ -1,0 +1,12 @@
+.title {
+  padding: 1rem;
+  display: inline-block;
+  background-image: var(--title-gradient);
+  background-clip: text;
+  color: transparent;
+  font: var(--header-font);
+}
+
+.title::first-letter {
+  text-transform: uppercase;
+}

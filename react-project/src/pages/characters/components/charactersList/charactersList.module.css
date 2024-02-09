@@ -1,0 +1,5 @@
+.cardList {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1.5rem;
+}

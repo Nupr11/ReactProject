@@ -1,0 +1,5 @@
+.logoTitle {
+  font: var(--logo-font);
+  color: var(--tertiary-color);
+  text-shadow: 0.2px 0.2px 2px var(--tertiary-color);
+}

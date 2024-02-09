@@ -1,0 +1,24 @@
+.infoList {
+  padding: var(--card-padding);
+  font: 0.7rem/0.8rem "Red Hat Text italic";
+  list-style-type: none;
+}
+
+.infoItem {
+  margin: 0.1rem;
+}
+
+.infoItem,
+.infoItem > a {
+  color: var(--primary-color);
+}
+
+.infoItem > a {
+  text-decoration: none;
+}
+
+.infoItemName {
+  width: 100%;
+  margin: 0 0.5rem;
+  opacity: 0.5;
+}

@@ -1,0 +1,11 @@
+.terms {
+  display: flex;
+  justify-content: center;
+  color: var(--tertiary-color);
+  font: 0.6rem/1.2rem "Red Hat Text Regular";
+  opacity: 0.8;
+}
+
+.year {
+  margin: 0 0.4rem;
+}
