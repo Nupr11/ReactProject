@@ -17,13 +17,14 @@ export function SearchBar({ className, infoKind, onSearch }) {
   };
 
   return (
-    <form className={`${className} ${styles.searchBar}`}>
+    <label className={`${className} ${styles.searchBar}`}>
+      <span>{`Find your favorite ${infoKind}:`}</span>
       <input
         className={styles.input}
         type="text"
         onChange={handleChange}
         placeholder={`Search ${infoKind}`}
       />
-    </form>
+    </label>
   );
 }

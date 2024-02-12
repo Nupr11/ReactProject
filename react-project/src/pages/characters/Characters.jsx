@@ -1,9 +1,12 @@
-import { CharactersList } from "./components";
 import styles from "./characters.module.css";
-import { SearchBar } from "../../components";
-import { AnimatedPage } from "../../components/animated";
 import { useState } from "react";
-import { Text, Title } from "../../components/features";
+import {
+  AnimatedPage,
+  CharactersList,
+  Text,
+  Title,
+  SearchBar,
+} from "./../../components";
 
 export function Characters() {
   const [searchQuery, setSearchQuery] = useState("");

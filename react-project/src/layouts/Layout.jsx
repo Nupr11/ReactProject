@@ -1,7 +1,7 @@
 import styles from "./layout.module.css";
-import { ButtonBack } from "../components";
-import { Header } from "./header";
-import { Footer } from "./footer";
+import { ButtonBack } from "./../components";
+import { Header } from "./header/Header";
+import { Footer } from "./footer/Footer";
 
 export function Layout({ className, children }) {
   return (

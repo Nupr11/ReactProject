@@ -14,6 +14,7 @@ export function ButtonArrow({ className, direction, onClick, disable }) {
   return (
     <button
       onClick={onClick}
+      disable={disable}
       className={`${className} ${styles[directionClass]} ${styles[disableClass]}`}
     />
   );

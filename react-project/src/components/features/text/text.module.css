@@ -3,3 +3,7 @@
   font: var(--font-paragraph);
   color: var(--secondary-color);
 }
+
+.text::first-letter {
+  text-transform: uppercase;
+}

@@ -1,15 +1,12 @@
-import { Link } from "react-router-dom";
 import styles from "./cardItem.module.css";
+import { Link } from "react-router-dom";
+import { memo } from "react";
 
-export function CardItem({ to, itemImage, itemCaption }) {
+function Component({ to, src, caption }) {
   const cardListItem = (
     <figure className={styles.card}>
-      <img
-        className={styles.img}
-        src={`${itemImage.path}.${itemImage.extension}`}
-        alt={itemCaption}
-      />
-      <figcaption>{itemCaption}</figcaption>
+      <img className={styles.img} src={src} alt={caption} />
+      <figcaption>{caption}</figcaption>
     </figure>
   );
   return (
@@ -18,3 +15,7 @@ export function CardItem({ to, itemImage, itemCaption }) {
     </li>
   );
 }
+
+const CardItem = memo(Component);
+
+export { CardItem };

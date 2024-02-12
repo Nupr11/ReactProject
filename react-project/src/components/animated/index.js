@@ -1,2 +1,2 @@
 export { AnimatedPage } from "./animatedPage/AnimatedPage";
-export { AnimatedFragment } from "./animatedText/AnimatedFragment";
+export { AnimatedFragment } from "./animatedFragment/AnimatedFragment";

@@ -7,7 +7,7 @@ import SVG_INSTAGRAM from "../assets/svg/instagram.svg";
 const SITE_NAME = {
   title: "Bids & Battles",
   slogan: "Collecting triumphs",
-  path: "home",
+  path: "/home",
 };
 
 const SITE_INFO = {

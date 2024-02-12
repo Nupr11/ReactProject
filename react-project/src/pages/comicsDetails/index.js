@@ -1,0 +1,1 @@
+export { ComicsByDetails } from "./ComicsByDetails";

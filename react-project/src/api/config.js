@@ -5,6 +5,4 @@ export const END_POINTS = {
   allChars: "/v1/public/characters",
   allComics: "/v1/public/comics",
   allSeries: "/v1/public/series",
-  singleComicById: (id) => `/v1/public/comics/${id}`,
-  allComicsByChar: (id) => `/v1/public/characters/${id}/comics`,
 };

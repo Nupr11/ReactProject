@@ -1,5 +1,21 @@
-export { Button } from "./lib";
-export { ButtonBack } from "./lib/";
-export { CardItem } from "./features/cardItem/CardItem";
-export { SearchBar } from "./lib/searchBar/SearcBar";
-export { Slider } from "./features/slider/Slider";
+export { AnimatedPage, AnimatedFragment } from "./animated";
+export {
+  Button,
+  ButtonArrow,
+  ButtonBack,
+  Nav,
+  SearchBar,
+  SocialList,
+} from "./lib";
+export {
+  CardItem,
+  CharactersList,
+  ComicsList,
+  Info,
+  Logo,
+  Slider,
+  Spinner,
+  Terms,
+  Text,
+  Title,
+} from "./features";

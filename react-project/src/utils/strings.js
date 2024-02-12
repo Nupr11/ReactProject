@@ -6,4 +6,4 @@ export const split = (str) => {
   } else throw new Error("used parameter is not string");
 };
 
-const randomInt = (max) => Math.trunc(Math.random() * max);
+export const randomInt = (max) => Math.trunc(Math.random() * max);

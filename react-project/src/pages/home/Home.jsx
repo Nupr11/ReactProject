@@ -1,38 +1,35 @@
 import styles from "./home.module.css";
-import { Promo } from "./components";
+import { AnimatedPage, Text, Title, Slider, Spinner } from "./../../components";
+import { Suspense } from "react";
 
-import avatar_01 from "./../../assets/img/avatar_01.jpeg";
-import avatar_02 from "./../../assets/img/avatar_02.jpeg";
-import avatar_03 from "./../../assets/img/avatar_03.jpeg";
-import avatar_04 from "./../../assets/img/avatar_04.jpeg";
-import avatar_05 from "./../../assets/img/avatar_05.jpeg";
-import avatar_06 from "./../../assets/img/avatar_06.jpeg";
-import avatar_07 from "./../../assets/img/avatar_07.jpeg";
-import { AnimatedPage } from "../../components/animated/animatedPage/AnimatedPage";
-import { useData } from "../../hooks/useData";
-import { getAllSeries } from "../../api/requests";
-
-// const promoData = new Set();
-// promoData.size = 7;
-// const randomInt = (max) => Math.trunc(Math.random() * max);
 export function Home() {
-  // const { data: series, loading: loadingSeries } = useData(getAllSeries(), []);
-  // promoData.map((item) => (item = series(randomInt(series.length))));
-  // console.log(promoData);
-  // const randomInt = series.length;
   return (
     <AnimatedPage>
-      {
-        <Promo className={styles.promo}>
-          <img src={avatar_01} alt="slide_01" />
-          <img src={avatar_02} alt="slide_02" />
-          <img src={avatar_03} alt="slide_03" />
-          <img src={avatar_04} alt="slide_04" />
-          <img src={avatar_05} alt="slide_05" />
-          <img src={avatar_06} alt="slide_06" />
-          <img src={avatar_07} alt="slide_07" />
-        </Promo>
-      }
+      <section className={styles.promo}>
+        <Title className={styles.title}>
+          top seven of the most wanted characters
+        </Title>
+        <Text className={styles.text}>
+          welcome to our curated collection of captivating characters! Here,
+          you'll find the most intriguing heroes from across realms and
+          dimensions, each with a unique story waiting to be discovered. Dive
+          into the depths of imagination as you encounter fearless adventurers,
+          cunning rogues, and enigmatic beings beyond your wildest dreams.
+        </Text>
+        <Text className={styles.text}>
+          these are not just any heroes – they're the ones that will ignite your
+          imagination and leave you yearning for more. Click through our
+          selection and let fate guide you to your next unforgettable encounter.
+          Whether you're drawn to tales of bravery, mystery, or sheer whimsy,
+          there's something here for every seeker of adventure.
+        </Text>
+        <Text className={styles.text}>
+          join us as we celebrate the extraordinary and embark on a journey
+          through the most enthralling tales ever told. Your next favorite
+          character awaits – are you ready to meet them?
+        </Text>
+        <Slider className={styles.sliderWrapper} />
+      </section>
     </AnimatedPage>
   );
 }

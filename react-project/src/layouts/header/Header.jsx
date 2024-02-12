@@ -1,6 +1,5 @@
 import styles from "./header.module.css";
-import { Logo, Nav } from "./components";
-import { Button } from "../../components";
+import { Logo, Nav, Button } from "./../../components";
 
 export function Header({ className }) {
   return (

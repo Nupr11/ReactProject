@@ -1,5 +1,10 @@
 export { CardItem } from "./cardItem/CardItem";
+export { CharactersList } from "./charactersList/CharactersList";
+export { ComicsList } from "./comicsList/ComicsList";
+export { Info } from "./info/Info";
+export { Logo } from "./logo/Logo";
 export { Slider } from "./slider/Slider";
 export { Spinner } from "./spinner/Spinner";
+export { Terms } from "./terms/Terms";
 export { Text } from "./text/Text";
 export { Title } from "./title/Title";

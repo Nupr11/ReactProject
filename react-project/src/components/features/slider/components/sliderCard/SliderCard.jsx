@@ -1,12 +1,9 @@
 import styles from "./sliderCard.module.css";
 
-export function SliderCard({ className, onClick, index, children }) {
+export function SliderCard({ className, onClick, src, alt, children }) {
   return (
-    <li
-      key={index}
-      onClick={onClick}
-      className={`${styles.slide} ${className}`}
-    >
+    <li onClick={onClick} className={`${styles.slide} ${className}`}>
+      <img src={src} alt={alt} />
       {children}
     </li>
   );

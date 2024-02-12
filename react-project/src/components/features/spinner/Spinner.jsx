@@ -1,6 +1,6 @@
 import styles from "./spinner.module.css";
 import { SelfBuildingSquareSpinner } from "react-epic-spinners";
-import { AnimatedFragment } from "../../animated/animatedText";
+import { AnimatedFragment } from "../../animated/animatedFragment";
 import { split } from "../../../utils/strings";
 
 const SPINNER_DEFAULTS = {
