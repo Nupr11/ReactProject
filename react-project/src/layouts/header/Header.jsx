@@ -22,7 +22,11 @@ export function Header({ className }) {
           </CustomLink>
         )}
       </div>
-      {user ? <Button handler={logout}>logout</Button> : null}
+      {user ? (
+        <Button className={styles.outBtn} handler={logout}>
+          logout
+        </Button>
+      ) : null}
     </header>
   );
 }

@@ -22,11 +22,6 @@ import {
 export function App() {
   const location = useLocation();
 
-  // const { data: userData } = useUser();
-  // const { setUser } = useStore();
-
-  // useEffect(() => setUser());
-
   return (
     <SWRConfig value={{ revalidateIfStale: false }}>
       <Layout>
