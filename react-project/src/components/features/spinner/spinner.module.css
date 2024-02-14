@@ -4,7 +4,6 @@
   width: max-content;
   display: flex;
   align-items: center;
-  background-color: var(--tertiary-color);
   box-shadow: 0 10px 17px -8px var(--tertiary-color);
 }
 
@@ -13,6 +12,6 @@
 }
 
 .spinnerContainer > div {
-  color: var(--primary-color);
+  color: var(--tertiary-color);
   font: var(--header-font);
 }

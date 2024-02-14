@@ -1,6 +1,5 @@
 import styles from "./home.module.css";
-import { AnimatedPage, Text, Title, Slider, Spinner } from "./../../components";
-import { Suspense } from "react";
+import { AnimatedPage, Text, Title, Slider } from "../../components";
 
 export function Home() {
   return (

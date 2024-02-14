@@ -1,4 +1,4 @@
-import styles from "./characters.module.css";
+import styles from "./chars.module.css";
 import { useState } from "react";
 import {
   AnimatedPage,
@@ -6,9 +6,9 @@ import {
   Text,
   Title,
   SearchBar,
-} from "./../../components";
+} from "../../components";
 
-export function Characters() {
+export function Chars() {
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = (query) => {

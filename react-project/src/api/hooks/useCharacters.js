@@ -6,7 +6,8 @@ import { buildKey } from "../../lib/swr";
 export const useCharacters = (params) => {
   const { data, error, isLoading } = useSWR(
     buildKey(`${BASE_URL}${END_POINTS.allChars}`, params),
-    () => getAllChars(params)
+    () => getAllChars(params),
+    { revalidateIfStale: false }
   );
 
   return {

@@ -1,7 +1,10 @@
-export { Home } from "./home/Home";
-export { Comics } from "./comics/Comics";
-export { ComicsByChar } from "./comicsByChar/ComicsByChar";
-export { ComicsByDetails } from "./comicsDetails/ComicsByDetails";
-export { Characters } from "./characters/Characters";
-export { CharDetails } from "./characterDetails/CharDetails";
-export { PageNotFound } from "./notFound/PageNotFound";
+export { Auth } from "./Auth/Auth";
+export { DailyCollection } from "./DailyCollection/DailyCollection";
+export { Comics } from "./Comics/Comics";
+export { ComicBook } from "./СomicBook/ComicBook";
+export { Chars } from "./Chars/Chars";
+export { CharComics } from "./CharComics/CharComics";
+export { CharDetails } from "./CharDetails/CharDetails";
+export { Home } from "./Home/Home";
+export { NotFound } from "./NotFound/NotFound";
+export { UserProfile } from "./UserProfile/UserProfile";

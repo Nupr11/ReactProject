@@ -4,10 +4,9 @@ import {
   AnimatedPage,
   ComicsList,
   SearchBar,
-  Spinner,
   Text,
   Title,
-} from "./../../components";
+} from "../../components";
 
 export function Comics() {
   const [searchQuery, setSearchQuery] = useState("");

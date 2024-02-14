@@ -1,17 +1,17 @@
-import styles from "./comicsByChar.module.css";
+import styles from "./charComics.module.css";
 import { useParams } from "react-router-dom";
-import { useComicsByChar } from "./../../api";
-import { CardItem, Title, Spinner } from "./../../components";
+import { useComicsByChar } from "../../api";
+import { CardItem, Title, Spinner } from "../../components";
 
 const DEFAULT = {
   comicsByChar: [],
-  comicsLimit: 20,
+  limit: 20,
 };
 
-export function ComicsByChar({}) {
+export function CharComics() {
   const { charId } = useParams();
   const { data, isLoading, error } = useComicsByChar(charId, {
-    limit: DEFAULT.comicsLimit,
+    limit: DEFAULT.limit,
   });
   const comicsByChar = data || DEFAULT.comicsByChar;
 
@@ -21,7 +21,7 @@ export function ComicsByChar({}) {
       {error && <p>Error fetching data</p>}
       {data && (
         <section>
-          <Title>Comics</Title>
+          <Title>Comics by character</Title>
           <ul className={styles.cardList}>
             {comicsByChar.map((item) => (
               <CardItem

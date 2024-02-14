@@ -1,9 +1,8 @@
 import styles from "./spinner.module.css";
-import { SelfBuildingSquareSpinner } from "react-epic-spinners";
 import { AnimatedFragment } from "../../animated/animatedFragment";
 import { split } from "../../../utils/strings";
 
-const SPINNER_DEFAULTS = {
+const DEFAULTS = {
   text: "Loading...",
   animation: {
     from: { opacity: 0 },
@@ -13,12 +12,11 @@ const SPINNER_DEFAULTS = {
 };
 
 export function Spinner({ className }) {
-  const SPLIT_TEXT = split(SPINNER_DEFAULTS.text);
+  const SPLIT_TEXT = split(DEFAULTS.text);
   return (
     <div className={`${className} ${styles.spinnerContainer}`}>
-      <SelfBuildingSquareSpinner color="white" className={styles.spinner} />
       <AnimatedFragment
-        customConfig={SPINNER_DEFAULTS.animation}
+        customConfig={DEFAULTS.animation}
         className={styles.text}
       >
         {SPLIT_TEXT}

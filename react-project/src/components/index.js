@@ -1,12 +1,17 @@
 export { AnimatedPage, AnimatedFragment } from "./animated";
+
 export {
   Button,
   ButtonArrow,
   ButtonBack,
+  Input,
   Nav,
   SearchBar,
+  SignIn,
+  SignUp,
   SocialList,
 } from "./lib";
+
 export {
   CardItem,
   CharactersList,

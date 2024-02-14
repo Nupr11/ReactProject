@@ -6,7 +6,8 @@ import { buildKey } from "../../lib/swr";
 export const useComics = (params) => {
   const { data, error, isLoading } = useSWR(
     buildKey(`${BASE_URL}${END_POINTS.allComics}`, params),
-    () => getAllComics(params)
+    () => getAllComics(params),
+    { revalidateIfStale: false }
   );
 
   return {

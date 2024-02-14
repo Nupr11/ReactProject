@@ -7,7 +7,7 @@ export const useDetailsByChar = (charId, params) => {
   const { data, error, isLoading } = useSWR(
     buildKey(`${BASE_URL}${END_POINTS.allChars}/${charId}`, params),
     () => getInfoByChar(charId, params),
-    { revalidate: false }
+    { revalidateIfStale: false }
   );
 
   return {

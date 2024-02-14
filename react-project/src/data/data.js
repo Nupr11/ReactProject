@@ -32,13 +32,17 @@ const NAV_LINKS = [
     title: "comics",
     path: "/comics",
   },
+  {
+    title: "daily collection",
+    path: "/collection",
+  },
 ];
 
 const SOCIAL_LINKS = [
   {
     title: "github",
     path: SVG_GITHUB,
-    to: "github.com",
+    to: "/github.com",
     id: 1,
     width: 20,
     height: 20,
@@ -46,7 +50,7 @@ const SOCIAL_LINKS = [
   {
     title: "facebook",
     path: SVG_FB,
-    to: "facebook.com",
+    to: "/facebook.com",
     id: 2,
     width: 20,
     height: 20,
@@ -54,7 +58,7 @@ const SOCIAL_LINKS = [
   {
     title: "twitter",
     path: SVG_TWITTER,
-    to: "twitter.com",
+    to: "/twitter.com",
     id: 3,
     width: 20,
     height: 20,
@@ -62,7 +66,7 @@ const SOCIAL_LINKS = [
   {
     title: "instagram",
     path: SVG_INSTAGRAM,
-    to: "instagram.com",
+    to: "/instagram.com",
     id: 4,
     width: 20,
     height: 20,
@@ -70,7 +74,7 @@ const SOCIAL_LINKS = [
   {
     title: "youtube",
     path: SVG_YOUTUBE,
-    to: "youtube.com",
+    to: "/youtube.com",
     id: 5,
     width: 20,
     height: 20,

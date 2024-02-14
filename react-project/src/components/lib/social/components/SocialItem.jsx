@@ -1,5 +1,6 @@
 import styles from "./socialItem.module.css";
 import { HandySvg } from "handy-svg";
+import { Link } from "react-router-dom";
 
 export const SocialItem = ({ className, icon }) => {
   const svgIcon = (
@@ -11,5 +12,9 @@ export const SocialItem = ({ className, icon }) => {
       height={icon.width}
     />
   );
-  return <li className={`${className} ${styles.socialItem}`}>{svgIcon}</li>;
+  return (
+    <Link to={`/${icon.to}`}>
+      <li className={`${className} ${styles.socialItem}`}>{svgIcon}</li>
+    </Link>
+  );
 };

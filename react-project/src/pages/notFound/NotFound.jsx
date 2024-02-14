@@ -1,7 +1,7 @@
 import IMG_404 from "./../../assets/img/404.png";
-import styles from "./pageNotFound.module.css";
+import styles from "./notFound.module.css";
 
-export const PageNotFound = () => {
+export const NotFound = () => {
   return (
     <section className={styles.section}>
       <div className={styles.textContainer}>

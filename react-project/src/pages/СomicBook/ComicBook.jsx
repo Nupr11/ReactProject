@@ -1,14 +1,14 @@
-import styles from "./comicsByDetails.module.css";
-import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import styles from "./comicBook.module.css";
+import { Link, useParams } from "react-router-dom";
+import { generateContent } from "../../utils/generateLorem";
 import { useDetailsByComics } from "../../api";
 import { Text, Title, Spinner } from "../../components";
-import { generateContent } from "../../utils/generateLorem";
+import { Suspense } from "react";
 
 const DEFAULT = {
   comic: {},
 };
-export function ComicsByDetails() {
+export function ComicBook() {
   const { id } = useParams();
   const { data, isLoading, error } = useDetailsByComics(id, {
     limit: 10,
@@ -18,7 +18,7 @@ export function ComicsByDetails() {
   console.log(comic?.available);
 
   return (
-    <div>
+    <Suspense fallback={<p>TEEEEEEEESSSTSTST</p>}>
       {error && <p>Something go wrong with fetching data</p>}
       {isLoading && <Spinner />}
       {data && (
@@ -49,6 +49,6 @@ export function ComicsByDetails() {
           </ul>
         </section>
       )}
-    </div>
+    </Suspense>
   );
 }

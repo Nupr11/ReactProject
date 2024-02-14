@@ -8,6 +8,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.7",
+    "firebase": "^10.8.0",
     "framer-motion": "^11.0.3",
     "handy-svg": "^1.0.8",
     "lorem-ipsum": "^2.0.8",
@@ -19,7 +20,8 @@
     "react-spring": "^9.7.3",
     "regenerator-runtime": "^0.14.1",
     "swr": "^2.2.4",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "zustand": "^4.5.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -44,5 +46,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }

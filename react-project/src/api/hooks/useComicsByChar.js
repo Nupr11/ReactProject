@@ -7,7 +7,7 @@ export const useComicsByChar = (charId, params) => {
   const { data, error, isLoading } = useSWR(
     buildKey(`${BASE_URL}${END_POINTS.allChars}/${charId}/comics`, params),
     () => getComicsByChar(charId, params),
-    { revalidate: false }
+    { revalidateIfStale: false }
   );
 
   return {
