@@ -1,26 +1,14 @@
-import { useNavigate, useLocation } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { AnimatedPage, SignIn, SignUp } from "../../components";
+import { useStore } from "../../store/useStore";
 
 export function Auth() {
-  const navigation = useNavigate();
-  const location = useLocation();
+  const { user, isHasAccount } = useStore();
 
-  //   const { createUser } = useUser();
-
-  //   const { user, setUser, updateUserField } = useStore();
-
-  //   updateUserField({ name, value });
-  //   setUserData((prevData) => ({ ...prevData, [name]: value }));
-
-  // const handleSubmit = () => {
-  //   setUser(userData);
-  //   createUser();
+  if (user) return <Navigate to="/profile" replace />;
   return (
     <AnimatedPage>
-      <section>
-        <SignUp />
-        <SignIn />
-      </section>
+      <section>{isHasAccount ? <SignIn /> : <SignUp />}</section>
     </AnimatedPage>
   );
 }

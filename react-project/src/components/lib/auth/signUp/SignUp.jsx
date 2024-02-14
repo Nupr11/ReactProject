@@ -2,61 +2,80 @@ import styles from "./signUp.module.css";
 import { Input } from "../../input";
 import { Button } from "../../button/Button";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../../../storage/firebase";
+import { auth } from "../../../../lib/firebase";
 import { useStore } from "../../../../store/useStore";
 import { Title } from "../../../features";
 import { useState } from "react";
+import { Error } from "../../../features";
 
 export function SignUp() {
-  const { user, setUser, updateUserField } = useStore();
-  const [result, setResult] = useState(null);
+  const { setUser, hasAccountToggle } = useStore();
+  const [error, setError] = useState(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
 
   const submitHandler = async (e) => {
     e.preventDefault();
+
     try {
-      await createUserWithEmailAndPassword(auth, user.email, user.password);
-      setResult("New user created successfully");
+      const res = await createUserWithEmailAndPassword(
+        auth,
+        formData.email,
+        formData.password
+      );
+
+      setError(null);
+      setUser(res.user);
     } catch (error) {
-      setResult(error.message);
+      setError(error);
     }
-    setUser(user);
   };
 
-  const changeHandler = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    updateUserField({ name, value });
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   return (
-    <form className={styles.loginForm}>
-      <Title>Create account</Title>
-      <Input
-        className={styles.label}
-        type="text"
-        label="name"
-        value={user.name}
-        handler={changeHandler}
-      />
-      <Input
-        className={styles.label}
-        type="email"
-        label="email"
-        value={user.email}
-        handler={changeHandler}
-      />
-      <Input
-        className={styles.label}
-        type="password"
-        label="password"
-        value={user.password}
-        handler={changeHandler}
-      ></Input>
-      <>
+    <>
+      {error ? <Error msg={error.message} /> : null}
+      <form className={styles.loginForm}>
+        <Title>Create account</Title>
+        <Input
+          className={styles.label}
+          type="text"
+          label="name"
+          value={formData.name}
+          handler={handleChange}
+        />
+        <Input
+          className={styles.label}
+          type="email"
+          label="email"
+          value={formData.email}
+          handler={handleChange}
+        />
+        <Input
+          className={styles.label}
+          type="password"
+          label="password"
+          value={formData.password}
+          handler={handleChange}
+        ></Input>
         <Button className={styles.btn} type="submit" handler={submitHandler}>
           Sign up
         </Button>
-      </>
-      <span>{result}</span>
-    </form>
+      </form>
+      <Button
+        type="button"
+        className={styles.toggleBtn}
+        handler={hasAccountToggle}
+      >
+        Already have an account?
+      </Button>
+    </>
   );
 }

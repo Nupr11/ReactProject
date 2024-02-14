@@ -1,24 +1,28 @@
 import styles from "./header.module.css";
-import { Logo, Nav, Button } from "./../../components";
-import { Link } from "react-router-dom";
+import { Logo, Nav } from "./../../components";
 import { useStore } from "../../store/useStore";
+import { CustomLink } from "../../components/lib";
+import { Button } from "../../components/lib";
 
 export function Header({ className }) {
-  const { user } = useStore();
+  const { user, logout } = useStore();
 
   return (
     <header className={`${className} ${styles.header}`}>
       <Logo className={styles.logo} />
       <Nav className={styles.nav} />
       <div>
-        <div>{user.name}</div>
-        <div>{user.email}</div>
-        <div>{user.password}</div>
-        <Button className={styles.button} text="Sign in" handler={null} />
-        <Link className={styles.button} to="/auth">
-          Log in
-        </Link>
+        {user ? (
+          <CustomLink className={styles.login} to="/profile">
+            {user.email}
+          </CustomLink>
+        ) : (
+          <CustomLink className={styles.login} to="/auth">
+            Sign In
+          </CustomLink>
+        )}
       </div>
+      {user ? <Button handler={logout}>logout</Button> : null}
     </header>
   );
 }

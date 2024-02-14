@@ -1,3 +1,4 @@
+export { Error } from "./error/Error";
 export { CardItem } from "./cardItem/CardItem";
 export { CharactersList } from "./charactersList/CharactersList";
 export { ComicsList } from "./comicsList/ComicsList";

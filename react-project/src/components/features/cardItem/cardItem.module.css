@@ -1,6 +1,7 @@
 .cardListItem {
   padding: 0.2rem;
   max-width: 120px;
+  height: 100%;
 }
 
 .card {

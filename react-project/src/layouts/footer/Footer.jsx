@@ -1,6 +1,6 @@
 import styles from "./footer.module.css";
 import { Info, SocialList, Terms } from "./../../components";
-import { SOCIAL_LINKS, SITE_INFO } from "./../../data/data";
+import { SOCIAL_LINKS, SITE_INFO } from "../../constants/data";
 
 export const Footer = ({ className }) => {
   return (

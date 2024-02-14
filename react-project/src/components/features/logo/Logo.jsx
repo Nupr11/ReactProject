@@ -1,7 +1,7 @@
 import styles from "./logo.module.css";
 import { LogoTitle, LogoSlogan } from "./components";
 import { Link } from "react-router-dom";
-import { SITE_NAME } from "../../../data/data";
+import { SITE_NAME } from "../../../constants/data";
 import { AnimatedFragment } from "./../../../components/";
 
 const DEFAULT = {

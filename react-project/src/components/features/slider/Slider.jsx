@@ -3,13 +3,14 @@ import { useState, useEffect } from "react";
 import { SliderActions, SliderCard, SliderCardInfo } from "./components";
 import { useCharacters } from "./../../../api";
 import { Spinner } from "../spinner";
+import { Error } from "../error";
 
 const DEFAULT = {
   data: [],
-  ERROR_FETCH: "Error fetching data",
   START_SLIDE: 0,
   LIMIT_SLIDES: 100,
   USED_SLIDES: 9,
+  ERROR_FETCH: "Error fetching data",
   NOT_EXISTED_IMG: "image_not_available",
 };
 
@@ -41,7 +42,7 @@ export function Slider({ className }) {
 
   return (
     <>
-      {error && <>{DEFAULT.ERROR_FETCH}</>}
+      {error && <Error msg={DEFAULT.ERROR_FETCH} />}
       {isLoading && <Spinner />}
       <div className={`${className} ${styles.sliderWrapper}`}>
         <SliderActions

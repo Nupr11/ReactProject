@@ -4,17 +4,18 @@ import { Spinner } from "..";
 import { lowered } from "../../../utils/strings";
 import { useMemo } from "react";
 import { useComics } from "../../../api/hooks/useComics";
+import { Error } from "..";
 
 const DEFAULT = {
   comics: [],
   limit: 100,
   NOT_EXISTED_IMG: "image_not_available",
+  FETCH_ERROR: "Error fetching data",
+  IMG_NOT_FOUND_WARN: "Sorry, try else",
 };
 
 export function ComicsList({ className, searchQuery }) {
   const { data, isLoading, error } = useComics({ limit: DEFAULT.limit });
-  if (error) throw new Error("Error fetching data");
-
   const comics = data || DEFAULT.comics;
 
   const filteredComics = useMemo(
@@ -30,7 +31,10 @@ export function ComicsList({ className, searchQuery }) {
   return (
     <>
       {isLoading && <Spinner />}
-      {error && <p>Error Fetching data</p>}
+      {error && <Error msg={DEFAULT.FETCH_ERROR} />}
+      {!isLoading && !filteredComics.length && (
+        <Error msg={DEFAULT.IMG_NOT_FOUND_WARN} />
+      )}
       <ul className={`${styles.cardList} ${className}`}>
         {filteredComics.map((item) => (
           <CardItem

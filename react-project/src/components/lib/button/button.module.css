@@ -1,4 +1,5 @@
 .btn {
+  margin: 0 0.5rem;
   padding: var(--button-primary-padding);
   font: var(--button-primary-font);
   background-color: var(--button-primary-bg);
@@ -12,4 +13,5 @@
 .btn:hover {
   background-color: var(--button-hover-bg);
   color: var(--button-hover-color);
+  cursor: pointer;
 }

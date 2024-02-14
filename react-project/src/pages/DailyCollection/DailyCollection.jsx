@@ -4,9 +4,7 @@ import { AnimatedPage } from "../../components/animated/animatedPage/AnimatedPag
 export function DailyCollection() {
   return (
     <AnimatedPage>
-      <section>
-        <p>asdfasfdsaf</p>
-      </section>
+      <section></section>
     </AnimatedPage>
   );
 }

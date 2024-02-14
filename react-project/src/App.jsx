@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { Layout } from "./layouts";
 import { RequireAuth } from "./hoc/RequireAuth";
+import "./lib/firebase";
 import {
   Auth,
   ComicBook,
