@@ -4,6 +4,7 @@ import { generateContent } from "../../utils/generateLorem";
 import { useDetailsByComics } from "../../api";
 import { Text, Title, Spinner } from "../../components";
 import { Suspense } from "react";
+import { sliceUrlEnd } from "../../utils/strings";
 
 const DEFAULT = {
   comic: {},
@@ -39,9 +40,7 @@ export function ComicBook() {
           <ul className={styles.comicsList}>
             {comic?.characters?.items.map((item, index) => (
               <li key={comic.id + index}>
-                <Link
-                  to={`/characters/${item.resourceURI.split("/").slice(-1)[0]}`}
-                >
+                <Link to={`/characters/${sliceUrlEnd(item.resourceURI)}`}>
                   {item.name}
                 </Link>
               </li>

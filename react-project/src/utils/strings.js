@@ -2,7 +2,7 @@ export const lowered = (str) => str.toLowerCase().trim();
 
 export const randomInt = (max) => Math.trunc(Math.random() * max);
 
-export const sliceUrlEnd = (str) => str.split("/").at();
+export const sliceUrlEnd = (str) => str.split("/").at(-1);
 
 export const split = (str) => {
   if (typeof str === "string") {

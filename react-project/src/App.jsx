@@ -27,7 +27,6 @@ export function App() {
       <Layout>
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
-            <Route path="*" index element={<NotFound />} />
             <Route path="/" index element={<Navigate to="home" replace />} />
             <Route path="home" index element={<Home />} />
             <Route path="auth" element={<Auth />} />
@@ -45,6 +44,7 @@ export function App() {
                 </RequireAuth>
               }
             />
+            <Route path="*" index element={<NotFound />} />
           </Routes>
         </AnimatePresence>
       </Layout>

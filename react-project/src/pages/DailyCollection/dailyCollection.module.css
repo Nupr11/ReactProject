@@ -1,0 +1,27 @@
+.cardList {
+  display: flex;
+  align-self: flex-start;
+  flex-direction: column;
+}
+
+.cardList > div {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  position: relative;
+}
+
+.cardListItem {
+  padding: 3rem;
+  position: relative;
+}
+
+.addBtn {
+  position: absolute;
+  left: 30%;
+  top: 30%;
+}
+
+.addBtn:hover {
+  background-color: var(--secondary-color);
+}

@@ -27,7 +27,7 @@ export function CharComics() {
               <CardItem
                 className={styles.cardListItem}
                 key={item.id}
-                to={`/comics/${item.id}`}
+                to={`/comics/${item.id}/`}
                 caption={item.title}
                 src={`${item.thumbnail.path}.${item.thumbnail.extension}`}
               />

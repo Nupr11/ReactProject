@@ -43,7 +43,7 @@ export function CharDetails() {
           <ul className={styles.comicsList}>
             {character?.comics?.items.map((item) => (
               <li key={item?.name + item?.resourceURI}>
-                <Link to={`/comics/${sliceUrlEnd(item?.resourceURI)}`}>
+                <Link to={`/comics/${sliceUrlEnd(item.resourceURI)}`}>
                   {item?.name}
                 </Link>
               </li>
@@ -54,3 +54,4 @@ export function CharDetails() {
     </AnimatedPage>
   );
 }
+// to={`/characters/${item.resourceURI.split("/").slice(-1)[0]}`}

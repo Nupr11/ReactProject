@@ -27,7 +27,7 @@ export function ComicsList({ className, searchQuery }) {
       ),
     [comics, searchQuery]
   );
-
+  console.log(filteredComics);
   return (
     <>
       {isLoading && <Spinner />}

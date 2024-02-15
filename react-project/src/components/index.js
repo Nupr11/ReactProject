@@ -16,6 +16,7 @@ export {
   CardItem,
   CharactersList,
   ComicsList,
+  Error,
   Info,
   Logo,
   Slider,

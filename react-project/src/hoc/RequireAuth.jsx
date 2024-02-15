@@ -1,9 +1,9 @@
-import { Navigate, Outlet } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { useStore } from "../store/useStore";
 
-export function RequireAuth() {
+export function RequireAuth({ children }) {
   const { user } = useStore();
 
   if (!user) return <Navigate to="/auth" replace />;
-  return <Outlet />;
+  return children;
 }

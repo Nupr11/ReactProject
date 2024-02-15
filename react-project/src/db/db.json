@@ -1,5 +1,6 @@
 {
   "users": {
-    "userSet": {}
+    "id": "test",
+    "set": ["2", "4"]
   }
 }
